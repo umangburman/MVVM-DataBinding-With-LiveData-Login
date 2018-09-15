@@ -1,4 +1,4 @@
-# Login Example with MVVM, DataBinding With LiveData.
+# Login Example with MVVM, DataBinding With LiveData
 
 This is a very simple **Login Example** using **MVVM pattern and DataBinding and LiveData** in Android. It takes input from the UI using DataBinding **"@="**, stores it in LiveData and displays back on the UI.
 
