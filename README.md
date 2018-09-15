@@ -1,6 +1,6 @@
 # Login Example with MVVM, DataBinding With LiveData.
 
-This is a very simple **Login Example using **MVVM pattern and DataBinding and LiveData** in Android. It takes the input from the UI using DataBinding **@=**, stores it in LiveData and displays back on the UI.
+This is a very simple **Login Example** using **MVVM pattern and DataBinding and LiveData** in Android. It takes the input from the UI using DataBinding **@=**, stores it in LiveData and displays back on the UI.
 
 This example is for those who want to learn the easiest way to get data from Android UI. This is useful in many ways such as Saving Development Time, Code Reusability, Validations etc. No wonder it is being used all over Android Community.
 
