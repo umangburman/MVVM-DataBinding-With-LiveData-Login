@@ -1,8 +1,8 @@
 # Login Example with MVVM, DataBinding With LiveData.
 
-This is a very simple **Login Example** using **MVVM pattern and DataBinding and LiveData** in Android. It takes the input from the UI using DataBinding **@=**, stores it in LiveData and displays back on the UI.
+This is a very simple **Login Example** using **MVVM pattern and DataBinding and LiveData** in Android. It takes input from the UI using DataBinding **"@="**, stores it in LiveData and displays back on the UI.
 
-This example is for those who want to learn the easiest way to get data from Android UI. This is useful in many ways such as Saving Development Time, Code Reusability, Validations etc. No wonder it is being used all over Android Community.
+This example is for those who want to learn the easiest way to get data from UI. This is useful in many ways such as Saving Development Time, Code Reusability, Validations etc. No wonder it is being used all over Android Community.
 
 So let's get started on using these technologies together in a single application:
 
@@ -98,11 +98,6 @@ android {
 ```Java
 def life_versions = "1.1.1"
 
-// Room components
-implementation "android.arch.persistence.room:runtime:$life_versions"
-annotationProcessor "android.arch.persistence.room:compiler:$life_versions"
-androidTestImplementation "android.arch.persistence.room:testing:$life_versions"
-
 // Lifecycle components
 implementation "android.arch.lifecycle:extensions:$life_versions"
 annotationProcessor "android.arch.lifecycle:compiler:$life_versions"
@@ -112,6 +107,9 @@ annotationProcessor "android.arch.lifecycle:compiler:$life_versions"
 ### **Step2:** Create a new class for the Model(LoginUser):
 
 ```Java
+
+import android.util.Patterns;
+
 public class LoginUser {
 
     private String strEmailAddress;
@@ -146,6 +144,11 @@ public class LoginUser {
 ### **Step2:** Create a new class for the ViewModel(LoginViewModel):
 
 ```Java
+
+import android.arch.lifecycle.MutableLiveData;
+import android.arch.lifecycle.ViewModel;
+import android.view.View;
+
 public class LoginViewModel extends ViewModel {
 
     public MutableLiveData<String> EmailAddress = new MutableLiveData<>();
@@ -177,6 +180,15 @@ public class LoginViewModel extends ViewModel {
 ### **Step3:** The View class(MainActivity):
 
 ```Java
+
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
+import android.databinding.DataBindingUtil;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+
 public class MainActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
