@@ -54,12 +54,10 @@ public class MainActivity extends AppCompatActivity {
                     binding.txtPassword.requestFocus();
                 }
                 else {
-                    binding.lblEmailAnswer.setText(loginUser.getStrEmailAddress());
-                    binding.lblPasswordAnswer.setText(loginUser.getStrPassword());
+                    loginViewModel.resultEmailAddress.setValue(loginUser.getStrEmailAddress());
+                    loginViewModel.resultPassword.setValue(loginUser.getStrPassword());
                 }
-
             }
         });
-
     }
 }

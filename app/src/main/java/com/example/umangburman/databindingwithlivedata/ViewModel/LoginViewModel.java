@@ -11,6 +11,9 @@ public class LoginViewModel extends ViewModel {
     public MutableLiveData<String> EmailAddress = new MutableLiveData<>();
     public MutableLiveData<String> Password = new MutableLiveData<>();
 
+    public MutableLiveData<String> resultEmailAddress = new MutableLiveData<>();
+    public MutableLiveData<String> resultPassword = new MutableLiveData<>();
+
     private MutableLiveData<LoginUser> userMutableLiveData;
 
     public MutableLiveData<LoginUser> getUser() {
