@@ -6,18 +6,18 @@
     <data>
         <variable
             name="LoginViewModel"
-            type="com.example.umangburman.databindingwithlivedata.ViewModel.LoginViewModel" />
+            type="com.example.umangburman.databindingwithlivedata.viewmodel.LoginViewModel" />
     </data>
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:isScrollContainer="true">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".View.MainActivity">
+            tools:context=".view.MainActivity">
 
             <TextView
                 android:id="@+id/lblTitle"
@@ -124,8 +124,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lblEmailAnswer" />
 
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </layout>

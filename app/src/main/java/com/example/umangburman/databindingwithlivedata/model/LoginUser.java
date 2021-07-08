@@ -1,12 +1,12 @@
-package com.example.umangburman.databindingwithlivedata.Model;
+package com.example.umangburman.databindingwithlivedata.model;
 
 import android.util.Patterns;
 
 
 public class LoginUser {
 
-    private String strEmailAddress;
-    private String strPassword;
+    private final String strEmailAddress;
+    private final String strPassword;
 
     public LoginUser(String EmailAddress, String Password) {
         strEmailAddress = EmailAddress;
